@@ -1,6 +1,6 @@
 from room import Room
-from .player import Player
-from .rooms import Rooms
+from player import Player
+from room import Rooms
 # Declare all the rooms
 
 room = {
@@ -34,46 +34,60 @@ room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
 
-#
+running = True
+
+while running == True
+    """put steps here"""
+    if char = n, e, s, w:
+        return updated status
+    if char = q: 
+        running ==False
+    else:
+        return f'not allowed'
+    
+    break if q==True
 # Main
 #
 
+def Directions:
+    def __init__(self,)
+
+
 # Make a new player object that is currently in the 'outside' room.
 
-class Game:
-    def __init__(self, player, room, description)
-    self.player = player
-    self.room = room
-    self.description = description
-    
-    def player:
-        #print code here
-        
-    def room:
-        #print code here
-        
-    def description:
-        #print code here
-        
-    def print_game(self):
+player_new = Player("Tom", "outside")
+
         """
         Print the game info
         """
-        print('{} is playing in room {} which looks like {}'.format(self.name, self.room, self.description))
-
+        
 # Write a loop that:
 #
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
-#
+#print current(initial state) of game
+
+char = input("Pick a direction n, e, s, w, q: ")
+for i in input
+   if char = n, e, s, w
+      return updated status
+    else:
+        return f'not allowed'
+for dict in room:
+            for key, value in dict():
+                print(key, value)
+
+                
+#game loop:
+while
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
 
 #plan:
-class Player:
+
     #name of player
     #room of player
     #description--is this of room or of player?

@@ -1,6 +1,6 @@
 from room import Room
-from .player import Player
-from .rooms import Rooms
+from player import Player
+from room import Rooms
 # Declare all the rooms
 
 room = {
