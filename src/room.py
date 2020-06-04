@@ -10,7 +10,6 @@ class Room:
         self.s_to = None
         self.e_to = None
         self.w_to = None
-
-    def get_room(self, direction):
-        self.direction = 
+    def __str__(self):
+        return f"{self.name}: {self.description}"
     

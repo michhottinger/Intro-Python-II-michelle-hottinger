@@ -1,6 +1,6 @@
 from room import Room
 from player import Player
-from room import Rooms
+
 # Declare all the rooms
 
 room = {
@@ -34,33 +34,39 @@ room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
 
-running = True
 
-while running == True
-    """put steps here"""
-    if char = n, e, s, w:
-        return updated status
-    if char = q: 
-        running ==False
+player = Player("Bongo", room['outside'])
+while True:
+    print (f'You are in room {player.location}')
+    action = input("Pick a direction n, s, e, w, q: ")
+    if action == "n":
+          next_room = player.location.n_to
+    elif action == "s":
+          next_room = player.location.s_to
+    elif action == "e":
+          next_room = player.location.e_to
+    elif action == "w":
+          next_room = player.location.w_to
+    elif action == "q":
+        print (f'Bye')
+        break
     else:
-        return f'not allowed'
+        print (f'Forbidden direction')
+        continue
+    if next_room == None:
+        print (f'No room here')
+        continue
+    player.location = next_room
     
-    break if q==True
-# Main
-#
-
-def Directions:
-    def __init__(self,)
+      
+    
+    
 
 
-# Make a new player object that is currently in the 'outside' room.
-
-player_new = Player("Tom", "outside")
-
-        """
+"""
         Print the game info
-        """
-        
+"""
+  
 # Write a loop that:
 #
 # * Prints the current room name
@@ -68,29 +74,3 @@ player_new = Player("Tom", "outside")
 # * Waits for user input and decides what to do.
 #print current(initial state) of game
 
-char = input("Pick a direction n, e, s, w, q: ")
-for i in input
-   if char = n, e, s, w
-      return updated status
-    else:
-        return f'not allowed'
-for dict in room:
-            for key, value in dict():
-                print(key, value)
-
-                
-#game loop:
-while
-# If the user enters a cardinal direction, attempt to move to the room there.
-# Print an error message if the movement isn't allowed.
-#
-# If the user enters "q", quit the game.
-
-#plan:
-
-    #name of player
-    #room of player
-    #description--is this of room or of player?
-    #if player moves in direction, update the room
-    #print an error if player move not allowed
-    #if player enters q, quit the game

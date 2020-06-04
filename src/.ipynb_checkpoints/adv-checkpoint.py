@@ -1,6 +1,6 @@
 from room import Room
 from player import Player
-from room import Rooms
+
 # Declare all the rooms
 
 room = {
@@ -34,49 +34,43 @@ room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
 
-#
-# Main
-#
 
-# Make a new player object that is currently in the 'outside' room.
-
-class Game:
-    def __init__(self, player, room, description)
-    self.player = player
-    self.room = room
-    self.description = description
+player = Player("Bongo", room['outside'])
+while True:
+    print (f'You are in room {player.location}')
+    action = input("Pick a direction n, s, e, w, q: ")
+    if action == "n":
+          next_room = player.location.n_to
+    elif action == "s":
+          next_room = player.location.s_to
+    elif action == "e":
+          next_room = player.location.e_to
+    elif action == "w":
+          next_room = player.location.w_to
+    elif action == "q":
+        print (f'Bye')
+        break
+    else:
+        print (f'Forbidden direction')
+        continue
+    if next_room == None:
+        print (f'No room here')
+        continue
+    player.location = next_room
     
-    def player:
-        #print code here
-        
-    def room:
-        #print code here
-        
-    def description:
-        #print code here
-        
-    def print_game(self):
-        """
-        Print the game info
-        """
-        print('{} is playing in room {} which looks like {}'.format(self.name, self.room, self.description))
+      
+    
+    
 
+
+"""
+        Print the game info
+"""
+  
 # Write a loop that:
 #
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
-#
-# If the user enters a cardinal direction, attempt to move to the room there.
-# Print an error message if the movement isn't allowed.
-#
-# If the user enters "q", quit the game.
+#print current(initial state) of game
 
-#plan:
-class Player:
-    #name of player
-    #room of player
-    #description--is this of room or of player?
-    #if player moves in direction, update the room
-    #print an error if player move not allowed
-    #if player enters q, quit the game
